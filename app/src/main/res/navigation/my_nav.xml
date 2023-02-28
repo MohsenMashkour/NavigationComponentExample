@@ -13,8 +13,10 @@
         <action
             android:id="@+id/goFromFirstFragmentToSecondFragment"
             app:destination="@id/secondFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right" />
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
 
     </fragment>
     <fragment
@@ -25,8 +27,10 @@
         <action
             android:id="@+id/goFromSecondFragmentToFirstFragment"
             app:destination="@id/firstFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right" />
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
         <argument
             android:name="text"
             app:argType="string"
